@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiram-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <button onclick="toggleMenu()" class="menu" id="menu"><i class="fa-solid fa-bars"></i></button>
+    <nav id="navbar">
+        <ul class="links">
+            <li class="link"><a><i class="fa-regular fa-house"></i></a></li>
+            <li class="link"><a href="#projects">Projects</a></li>
+            <li class="link"><a href="#experience">Experience</a></li>
+            <li class="link"><a href="#education">Education</a></li>
+            <li class="link"><a>Let's Talk <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </nav>
+    <div class="hero-section">
+        <div class="header" style="justify-content:space-between;">
+            <div class="greet" id="greet">
+                <p>👋 <span id="hello">Hello!</span></p>
+            </div>
+            <div class="header">
+                <div class="social-links">
+                    <i class="fa-brands fa-github"></i><i class="fa-brands fa-instagram"></i><i
+                        class="fa-brands fa-whatsapp"></i><i class="fa-brands fa-linkedin-in"></i><i
+                        class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="clock-container">
+                    <div class="time" id="time">12:00</div>
+                    <div class="details">
+                        <div class="ampm" id="ampm">AM</div>
+                        <div class="date" id="date">June 10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="hero">
+            <h1 class="hero-name">
+                <span class="line1">ABHIRAM</span>
+                <span class="line2" id="surname">PINNAKA</span>
+            </h1>
+        </section>
+        <p class="tech">Full Stack Developer • Java • Web Development</p>
+    </div>
+    <div class="about-section">
+        <section class="about">
+            <div class="about-intro">
+                👋 Hey, I'm Abhiram Pinnaka, a Computer Science Engineering student and I'm a...
+            </div>
+            <h1 class="about-title">
+                Full Stack Developer,
+            </h1>
+            <span>focused on building responsive web applications,
+                creating seamless user experiences,
+                and solving real-world problems through technology.</span>
+        </section>
+        <section class="terminal-section">
+            <div class="terminal-grid-bg">
+                <div class="terminal-grid"></div>
+            </div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                    <div class="terminal-title">
+                        Terminal
+                    </div>
+                    <div>
+                        🌙
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <p class="login">
+                        Last login: <span id="terminal-date"></span> on console
+                    </p>
+                    <p>
+                        <span class="user">user@machine:~$</span>
+                        <span class="command">fortune Abhiram.fortune</span>
+                    </p>
+                    <p>
+                        <span class="bot">bot@gpt:~$</span>
+                        Perfection may not be attainable,
+                        but if we chase perfection,
+                        we can catch excellence.
+                        <span class="cursor"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="projects-section">
+        <div class="dots-bg"></div>
+        <h2 class="projects-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="image/agri.png" alt="AgriGear" height="80px" width="80px">
+                <div class="project-content">
+                    <h3>AgriGear</h3>
+                    <a href="https://abhiram23bce20258.wixstudio.com/agri-gear">agri-gear.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="EatUp.png" alt="EatUp">
+                <div class="project-content">
+                    <h3>EatUp</h3>
+                    <a href="#">eat-up.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/pyflow.png" alt="AgriGear"  height="80px" width="80px">
+                <div class="project-content">
+                    <h3>PyFlow</h3>
+                    <a href="https://codetoflowchart.onrender.com/">pyflow.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/wheels.png" alt="WheelsAway" height="80px" width="80px">
+                <div class="project-content">
+                    <h3>WheelsAway</h3>
+                    <a href="https://abhiram1502.github.io/Car-Rentals/">wheels-away.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/eduguide.png" alt="EduGuide" height="80px" width="80px">
+                <div class="project-content">
+                    <h3>EduGuide</h3>
+                    <a href="https://abhiram1502.github.io/EduGuide/">eduguide.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/wheather.png" alt="Wheather-App"  height="80px" width="80px">
+                <div class="project-content">
+                    <h3>Weather-App</h3>
+                    <a href="https://abhiram1502.github.io/Weather-App/">weather-app.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/nike.png" alt="NikeClone"  height="80px" width="80px">
+                <div class="project-content">
+                    <h3>Nike Clone</h3>
+                    <a href="https://abhiram1502.github.io/Nike-Clone/" alt="nikeclone">nike-clone.in</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image/labvault.png" alt="LabVault"  height="80px" width="80px">
+                <div class="project-content">
+                    <h3>Lab Vault</h3>
+                    <a href="https://abhiram1502.github.io/LabVault/" alt="LabVault">labvault.onrender.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="experience"></div>
+    <div class="education">
+
+    </div>
+    <div class="contact-section">
+        <div class="contact">
+            <p>Connect with me on:</p>
+            <div><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-whatsapp"></i><i
+                    class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-x-twitter"></i></div>
+        </div>
+    </div>
+    <footer>
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+                <span>Thanks for visiting my portfolio! |</span>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-content m2">
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+                <span>Code & Crafted by Abhiram Pinnaka |</span>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© Abhiram Portifolio, All Right Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
