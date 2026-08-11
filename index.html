@@ -15,13 +15,35 @@
     <button onclick="toggleMenu()" class="menu" id="menu"><i class="fa-solid fa-bars"></i></button>
     <nav id="navbar">
         <ul class="links">
-            <li class="link"><a><i class="fa-regular fa-house"></i></a></li>
+            <li class="link"><a href="#"><i class="fa-regular fa-house"></i></a></li>
             <li class="link"><a href="#projects">Projects</a></li>
-            <li class="link"><a href="#experience">Experience</a></li>
+            <li class="link"><a href="#skills">Experience</a></li>
             <li class="link"><a href="#education">Education</a></li>
-            <li class="link"><a>Let's Talk <i class="fa-solid fa-arrow-right"></i></a></li>
+            <li class="link"><button onclick="openContact(event)">Let's Talk <i class="fa-solid fa-arrow-right"></i></button></li>
         </ul>
     </nav>
+    <div class="contact-overlay" id="contactOverlay" onclick="closeContact(event)">
+        <div class="contact-popup">
+            <div onclick="closeContact()" class="popup-handle"></div>
+            <h2>Let's Talk</h2>
+            <p>Have a project, opportunity, or something you'd like to discuss? Feel free to reach out.</p>
+            <a class="email-button" href="mailto:pinnakaabhiram@gmail.com?subject=Portfolio%20Inquiry">
+                <i class="fa-solid fa-envelope"></i>
+                Send me an email
+            </a>
+            <button class="copy-email" onclick="copyEmail()">
+                <i class="fa-regular fa-copy"></i>
+                Copy email
+            </button>
+            <div class="popup-socials">
+                <a href="https://github.com/Abhiram1502" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abhiram-pinnaka-/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
     <div class="hero-section">
         <div class="header" style="justify-content:space-between;">
             <div class="greet" id="greet">
@@ -29,9 +51,21 @@
             </div>
             <div class="header">
                 <div class="social-links">
-                    <i class="fa-brands fa-github"></i><i class="fa-brands fa-instagram"></i><i
-                        class="fa-brands fa-whatsapp"></i><i class="fa-brands fa-linkedin-in"></i><i
-                        class="fa-brands fa-x-twitter"></i>
+                    <a href="https://github.com/Abhiram1502" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhiram-pinnaka-/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
                 </div>
                 <div class="clock-container">
                     <div class="time" id="time">12:00</div>
@@ -99,7 +133,7 @@
             </div>
         </section>
     </div>
-    <div class="projects-section">
+    <div class="projects-section" id="projects">
         <div class="dots-bg"></div>
         <h2 class="projects-title">Projects</h2>
         <div class="projects-grid">
@@ -118,7 +152,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="image/pyflow.png" alt="AgriGear"  height="80px" width="80px">
+                <img src="image/pyflow.png" alt="AgriGear" height="80px" width="80px">
                 <div class="project-content">
                     <h3>PyFlow</h3>
                     <a href="https://codetoflowchart.onrender.com/">pyflow.in</a>
@@ -139,21 +173,21 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="image/wheather.png" alt="Wheather-App"  height="80px" width="80px">
+                <img src="image/wheather.png" alt="Wheather-App" height="80px" width="80px">
                 <div class="project-content">
                     <h3>Weather-App</h3>
                     <a href="https://abhiram1502.github.io/Weather-App/">weather-app.in</a>
                 </div>
             </div>
             <div class="project-card">
-                <img src="image/nike.png" alt="NikeClone"  height="80px" width="80px">
+                <img src="image/nike.png" alt="NikeClone" height="80px" width="80px">
                 <div class="project-content">
                     <h3>Nike Clone</h3>
                     <a href="https://abhiram1502.github.io/Nike-Clone/" alt="nikeclone">nike-clone.in</a>
                 </div>
             </div>
             <div class="project-card">
-                <img src="image/labvault.png" alt="LabVault"  height="80px" width="80px">
+                <img src="image/labvault.png" alt="LabVault" height="80px" width="80px">
                 <div class="project-content">
                     <h3>Lab Vault</h3>
                     <a href="https://abhiram1502.github.io/LabVault/" alt="LabVault">labvault.onrender.com</a>
@@ -161,10 +195,121 @@
             </div>
         </div>
     </div>
-    <div class="experience"></div>
-    <div class="education">
+    <section class="skills-section" id="skills">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <h3>Programming</h3>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="skill-list">
+                    <span><i class="fa-brands fa-java"></i>Java</span>
+                    <span><i class="fa-brands fa-python"></i>Python</span>
+                    <span><b>C</b>C</span>
+                    <span><b>C++</b>C++</span>
+                </div>
+            </div>
 
-    </div>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <h3>Frontend</h3>
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div class="skill-list">
+                    <span><i class="fa-brands fa-html5"></i>HTML</span>
+                    <span><i class="fa-brands fa-css3-alt"></i>CSS</span>
+                    <span><i class="fa-brands fa-js"></i>JavaScript</span>
+                    <span><i class="fa-brands fa-react"></i>React</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <h3>Backend & Database</h3>
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="skill-list">
+                    <span><i class="fa-brands fa-node-js"></i>Node.js</span>
+                    <span><b>EX</b>Express.js</span>
+                    <span><i class="fa-solid fa-leaf"></i>MongoDB</span>
+                    <span><i class="fa-solid fa-database"></i>MySQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <h3>Tools & Cloud</h3>
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div class="skill-list">
+                    <span><i class="fa-brands fa-git-alt"></i>Git</span>
+                    <span><i class="fa-brands fa-github"></i>GitHub</span>
+                    <span><i class="fa-solid fa-code"></i>VS Code</span>
+                    <span><b>AWS</b>AWS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-marquee">
+            <div class="skills-marquee-track">
+                <span>Java</span><b>•</b>
+                <span>Python</span><b>•</b>
+                <span>JavaScript</span><b>•</b>
+                <span>React</span><b>•</b>
+                <span>Node.js</span><b>•</b>
+                <span>MongoDB</span><b>•</b>
+                <span>MySQL</span><b>•</b>
+                <span>Git</span><b>•</b>
+                <span>GitHub</span><b>•</b>
+                <span>AWS</span><b>•</b>
+                <span>HTML</span><b>•</b>
+                <span>CSS</span><b>•</b>
+                <span>Java</span><b>•</b>
+                <span>Python</span><b>•</b>
+                <span>React</span><b>•</b>
+                <span>Node.js</span>
+            </div>
+        </div>
+    </section>
+    <!-- ================= EDUCATION ================= -->
+    <section class="education-section" id="education">
+        <h2 class="education-title">Education</h2>
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <div class="timeline-progress"></div>
+            <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card hidden">
+                    <span class="edu-year">2020-2021</span>
+                    <h3>SSC</h3>
+                    <p>Dreamz High School</p>
+                    <p><span class="marks">600</span>/600</p>
+                </div>
+            </div>
+
+            <div class="timeline-step up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card hidden">
+                    <span class="edu-year">2021-2023</span>
+                    <h3>Intermediate(MPC)</h3>
+                    <p>Bhashyam Junior College</p>
+                    <p><span class="marks">976</span>/1000</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card hidden">
+                    <span class="edu-year">2023-2027</span>
+                    <h3>B.Tech CSE</h3>
+                    <p>VIT-AP University</p>
+                    <p><span class="marks">9.19</span>/10</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <div class="contact-section">
         <div class="contact">
             <p>Connect with me on:</p>
